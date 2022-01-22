@@ -6,6 +6,9 @@ export const useFetch = (url) => {
 
     //La idea del isMounted es mantener la referencia cuando el hook esta vivo 
     //o cuando el componente qu el usa sigue montado
+
+    //Se utiliza para hacer referencias al DOM pero no el DOM de react
+    //Por ejemplos propiedades del DOM
     const isMounted = useRef(true);
 
     useEffect( () => {
