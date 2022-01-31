@@ -3,6 +3,12 @@ import React, { useState } from 'react';
 export const useForm = (initialState = {}) => {
      const [values, setvalues] = useState(initialState);
 
+     //función para resetear los valores y limpiar el campo a un string vacio
+     const reset = () => {
+       setvalues(initialState);
+     }
+
+
      //recibe el evento
      //const handleInputChange = (e) => {}
      //del evento que recibe extrae solo el target
@@ -17,5 +23,5 @@ export const useForm = (initialState = {}) => {
   
       }
     
-      return [values, handleInputChange];
+      return [values, handleInputChange, reset];
 };

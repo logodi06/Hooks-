@@ -46,7 +46,15 @@ export const useFetch = (url) => {
                     // }
                 //},4000);
 
-            });
+            })
+            //En caso dde que la petición HTTP falle, se debe cachar el error
+            .catch( () => {
+                 setState({
+                     data: null,
+                     loading: false,
+                     error: 'No se  pudo cargar a info'
+                 })
+            })
     }, [url]);
     
     return state;
