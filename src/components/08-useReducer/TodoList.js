@@ -3,7 +3,7 @@ import { TodoListItem } from './TodoListItem';
 
 export const TodoList = ({todos, handleDelete, handleToggle}) => {
 
-    console.log(handleToggle);
+    //console.log(handleToggle);
   return (
     <ul className='list-group list-group-flush'>
             {
